@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/DanKRT-Star/faq-accordion-main
-- Live Site URL: [Add your live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://faq-accordion-main-sepia.vercel.app/
 
 ## My process
 
