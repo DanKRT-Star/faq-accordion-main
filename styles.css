@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --White: hsl(0, 100%, 100%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    position: relative; 
+    font-family: 'Work Sans';
+    font-weight: 0.75rem;
+    color: var(--Purple-600);
+}
+
+h1, h4 {
+    color: var(--Purple-950);
+}
+
+main {
+   height: 100%;
+   background-color: var(--Purple-100);
+}
+
+picture img {
+  width: 100%;
+  object-fit: cover;
+  background-color: var(--Purple-100);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+
+main article {
+    background-color: var(--White);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+article > header {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+article > header img {
+    width: 20px;
+    margin-right: 20px;
+}
+
+article > *:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+section {
+    cursor: pointer;
+}
+
+section header:hover h4{
+    color: var(--Purple-950);
+    filter: brightness(4);
+}
+
+p {
+  display: none;
+  transform-origin: top;
+  transform: scaleY(0);
+  animation: expandVertical 0.3s ease forwards;
+}
+
+p.expand {
+  display: block;
+}
+
+@keyframes expandVertical {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
